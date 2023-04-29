@@ -60,3 +60,20 @@ DROP TABLE IF EXISTS TBL_DRIVERS;
       voucher_code VARCHAR(250) NOT NULL,
       voucher_expire_date VARCHAR(250) NOT NULL,
     );
+
+    DROP TABLE IF EXISTS TBL_BOOKINGS;
+
+    CREATE TABLE TBL_BOOKINGS (
+      id INT AUTO_INCREMENT  PRIMARY KEY,
+      booking_date VARCHAR(250) NOT NULL,
+      user_id INT NOT NULL,
+      booking_pick_up_location VARCHAR(250) NOT NULL,
+      booking_drop_off_location VARCHAR(250) NOT NULL,
+      booking_pick_up_time VARCHAR(250) NOT NULL,
+      booking_drop_off_time VARCHAR(250) NOT NULL,
+      booking_number_of_passengers VARCHAR(250) NOT NULL,
+      vehicle_id INT NOT NULL,
+      driver_id INT NOT NULL,
+      payment_id INT NOT NULL
+
+    );

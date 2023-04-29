@@ -55,15 +55,15 @@ public class BookingService {
             BookingEntity newEntity = booking.get();
             newEntity.setId(entity.getId());
             newEntity.setBookingDate(entity.getBookingDate());
-            newEntity.setBookingUserId(entity.getBookingUserId());
+            newEntity.setUser(entity.getUser());
             newEntity.setBookingPickUpLocation(entity.getBookingPickUpLocation());
             newEntity.setBookingDropOffLocation(entity.getBookingDropOffLocation());
             newEntity.setBookingPickUpTime(entity.getBookingPickUpTime());
             newEntity.setBookingDropOffTime(entity.getBookingDropOffTime());
             newEntity.setBookingNumberOfPassengers(entity.getBookingNumberOfPassengers());
-            newEntity.setBookingVehicleId(entity.getBookingVehicleId());
-            newEntity.setBookingDriverId(entity.getBookingDriverId());
-            newEntity.setBookingPaymentId(entity.getBookingPaymentId());
+            newEntity.setVehicle(entity.getVehicle());
+            newEntity.setDriver(entity.getDriver());
+            newEntity.setPayment(entity.getPayment());
 
             newEntity = repository.save(newEntity);
 

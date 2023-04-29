@@ -18,8 +18,7 @@ public class BookingEntity {
     private String bookingDate;
 
     @ManyToOne
-    @Column(name="booking_user_id", nullable=false)
-    private UserEntity bookingUserId;
+    private UserEntity User;
     @Column(name="booking_pick_up_location")
     private String bookingPickUpLocation;
 
@@ -36,16 +35,13 @@ public class BookingEntity {
     private String bookingNumberOfPassengers;
 
     @ManyToOne
-    @Column(name="booking_vehicle_id")
-    private VehicleEntity bookingVehicleId;
+    private VehicleEntity Vehicle;
 
     @ManyToOne
-    @Column(name="booking_driver_id")
-    private DriverEntity bookingDriverId;
+    private DriverEntity Driver;
 
     @OneToOne
-    @Column(name="booking_payment_id")
-    private PaymentEntity bookingPaymentId;
+    private PaymentEntity Payment;
 
     public Long getId() {
         return id;
@@ -63,12 +59,12 @@ public class BookingEntity {
         this.bookingDate = bookingDate;
     }
 
-    public UserEntity getBookingUserId() {
-        return bookingUserId;
+    public UserEntity getUser() {
+        return User;
     }
 
-    public void setBookingUserId(UserEntity bookingUserId) {
-        this.bookingUserId = bookingUserId;
+    public void setUser(UserEntity User) {
+        this.User = User;
     }
 
     public String getBookingPickUpLocation() {
@@ -111,27 +107,27 @@ public class BookingEntity {
         this.bookingNumberOfPassengers = bookingNumberOfPassengers;
     }
 
-    public VehicleEntity getBookingVehicleId() {
-        return bookingVehicleId;
+    public VehicleEntity getVehicle() {
+        return Vehicle;
     }
 
-    public void setBookingVehicleId(VehicleEntity bookingVehicleId) {
-        this.bookingVehicleId = bookingVehicleId;
+    public void setVehicle(VehicleEntity Vehicle) {
+        this.Vehicle = Vehicle;
     }
 
-    public DriverEntity getBookingDriverId() {
-        return bookingDriverId;
+    public DriverEntity getDriver() {
+        return Driver;
     }
 
-    public void setBookingDriverId(DriverEntity bookingDriverId) {
-        this.bookingDriverId = bookingDriverId;
+    public void setDriver(DriverEntity Driver) {
+        this.Driver = Driver;
     }
 
-    public PaymentEntity getBookingPaymentId() {
-        return bookingPaymentId;
+    public PaymentEntity getPayment() {
+        return Payment;
     }
 
-    public void setBookingPaymentId(PaymentEntity bookingPaymentId) {
-        this.bookingPaymentId = bookingPaymentId;
+    public void setPayment(PaymentEntity Payment) {
+        this.Payment = Payment;
     }
 }
