@@ -30,6 +30,12 @@ public class EmployeeEntity {
 
 	@Column(name="phone_number")
 	private String phoneNumber;
+
+	@Column(name="password")
+	private String password;
+
+	@Column(name="role")
+	private String role;
     
     public Long getId() {
 		return id;
@@ -67,7 +73,23 @@ public class EmployeeEntity {
 
 	public void setPhoneNumber(String phoneNumber){ this.phoneNumber = phoneNumber; }
 
-    @Override
+	public String getPassword() {
+		return password;
+	}
+
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
+	public String getRole() {
+		return role;
+	}
+
+	public void setRole(String role) {
+		this.role = role;
+	}
+
+	@Override
     public String toString() {
         return "EmployeeEntity [id=" + id + ", firstName=" + firstName + 
                 ", lastName=" + lastName + ", email=" + email   + "]";

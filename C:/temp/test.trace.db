@@ -2050,3 +2050,6 @@ select bookingent0_.id as id1_0_, bookingent0_.booking_date as booking_2_0_, boo
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:642)
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
 	at java.base/java.lang.Thread.run(Thread.java:1623)
+2023-04-30 11:42:53 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Syntax error in SQL statement "INSERT INTO TBL_EMPLOYEES (FIRST_NAME, LAST_NAME, EMAIL, PHONE_NUMBER, PASSWORD, ROLE VALUES[*] ('Lokesh', 'Gupta', 'howtodoinjava@gmail.com', '1234567', 'Lo12345', 'Admin') "; expected ",, )"; SQL statement:
+INSERT INTO TBL_EMPLOYEES (first_name, last_name, email, phone_number, password, role VALUES ('Lokesh', 'Gupta', 'howtodoinjava@gmail.com', '1234567', 'Lo12345', 'Admin') [42001-199]

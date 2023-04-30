@@ -1,7 +1,7 @@
 INSERT INTO 
-	TBL_EMPLOYEES (first_name, last_name, email, phone_number)
+	TBL_EMPLOYEES (first_name, last_name, email, phone_number, password, role)
 VALUES
-  	('Lokesh', 'Gupta', 'howtodoinjava@gmail.com', '1234567');
+  	('Lokesh', 'Gupta', 'howtodoinjava@gmail.com', '1234567', 'Lo12345', 'Admin');
 
 
 INSERT INTO
