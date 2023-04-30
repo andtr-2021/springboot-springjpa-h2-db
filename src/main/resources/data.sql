@@ -5,10 +5,10 @@ VALUES
 
 
 INSERT INTO
-	TBL_VEHICLES (name, brand, plate)
+	TBL_VEHICLES (name, brand, plate, color, seat_number)
 VALUES
-  	('Camry', 'Honda', '1234'),
-  	('Benz', 'Honda', '1235');
+  	('Camry', 'Honda', '1234', 'Black', '4'),
+  	('Benz', 'Honda', '1235', 'White', '7' );
 
 INSERT INTO
 	TBL_DRIVERS (driver_name, driver_phone_number, driver_license_number, driver_year_of_experience, driver_avatar)

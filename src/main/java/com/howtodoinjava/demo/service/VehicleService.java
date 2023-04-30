@@ -57,6 +57,8 @@ public class VehicleService {
             newEntity.setName(entity.getName());
             newEntity.setBrand(entity.getBrand());
             newEntity.setPlate(entity.getPlate());
+            newEntity.setColor(entity.getColor());
+            newEntity.setSeatNumber(entity.getSeatNumber());
 
             newEntity = repository.save(newEntity);
 

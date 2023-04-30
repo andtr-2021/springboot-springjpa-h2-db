@@ -22,6 +22,12 @@ public class VehicleEntity {
     @Column(name="plate")
     private String plate;
 
+    @Column(name="color")
+    private String color;
+
+    @Column(name="seat_number")
+    private String seatNumber;
+
     public Long getId() {
         return id;
     }
@@ -52,5 +58,21 @@ public class VehicleEntity {
 
     public void setPlate(String plate) {
         this.plate = plate;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public void setColor(String color) {
+        this.color = color;
+    }
+
+    public String getSeatNumber() {
+        return seatNumber;
+    }
+
+    public void setSeatNumber(String seatNumber) {
+        this.seatNumber = seatNumber;
     }
 }
