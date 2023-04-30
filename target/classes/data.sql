@@ -33,6 +33,6 @@ VALUES
   	('100', 'ABC123', '2020-01-01');
 
 INSERT INTO
-	TBL_BOOKINGS (booking_date, user_id, booking_pick_up_location, booking_drop_off_location, booking_pick_up_time, booking_drop_off_time, booking_number_of_passengers ,vehicle_id, driver_id, payment_id)
+	TBL_BOOKINGS (booking_date, user_id, booking_pick_up_location, booking_drop_off_location, booking_pick_up_time, booking_drop_off_time, booking_number_of_passengers ,vehicle_id, driver_id, payment_id, booking_status )
 VALUES
-  	('2020-01-01', 1, 'SaiGon', 'HoiAn', '2020-01-01 10:00:00', '2020-01-01 12:00:00', '10', 1, 1, 1);
+  	('2020-01-01', 1, 'SaiGon', 'HoiAn', '2020-01-01 10:00:00', '2020-01-01 12:00:00', '10', 1, 1, 1, 'Processing');

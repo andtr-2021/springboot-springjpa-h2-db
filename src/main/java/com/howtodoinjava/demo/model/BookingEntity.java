@@ -43,6 +43,9 @@ public class BookingEntity {
     @OneToOne
     private PaymentEntity Payment;
 
+    @Column(name="booking_status")
+    private String bookingStatus;
+
     public Long getId() {
         return id;
     }
@@ -129,5 +132,13 @@ public class BookingEntity {
 
     public void setPayment(PaymentEntity Payment) {
         this.Payment = Payment;
+    }
+
+    public String getBookingStatus() {
+        return bookingStatus;
+    }
+
+    public void setBookingStatus(String bookingStatus) {
+        this.bookingStatus = bookingStatus;
     }
 }

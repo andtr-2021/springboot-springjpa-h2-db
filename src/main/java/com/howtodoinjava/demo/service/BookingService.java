@@ -64,6 +64,7 @@ public class BookingService {
             newEntity.setVehicle(entity.getVehicle());
             newEntity.setDriver(entity.getDriver());
             newEntity.setPayment(entity.getPayment());
+            newEntity.setBookingStatus(entity.getBookingStatus());
 
             newEntity = repository.save(newEntity);
 

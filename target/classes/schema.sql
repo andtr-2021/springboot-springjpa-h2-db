@@ -75,6 +75,7 @@ DROP TABLE IF EXISTS TBL_DRIVERS;
       booking_number_of_passengers VARCHAR(250) NOT NULL,
       vehicle_id INT NOT NULL,
       driver_id INT NOT NULL,
-      payment_id INT NOT NULL
+      payment_id INT NOT NULL,
+      booking_status VARCHAR(250) NOT NULL
 
     );
