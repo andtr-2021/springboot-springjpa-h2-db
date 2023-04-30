@@ -59,6 +59,7 @@ public class DriverService {
             newEntity.setDriverLicenseNumber(entity.getDriverLicenseNumber());
             newEntity.setDriverYearOfExperience(entity.getDriverYearOfExperience());
             newEntity.setDriverAvatar(entity.getDriverAvatar());
+            newEntity.setDriverPassword(entity.getDriverPassword());
 
             newEntity = repository.save(newEntity);
 

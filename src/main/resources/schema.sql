@@ -30,7 +30,8 @@ DROP TABLE IF EXISTS TBL_DRIVERS;
     driver_phone_number VARCHAR(250) NOT NULL,
     driver_license_number VARCHAR(250) NOT NULL,
     driver_year_of_experience VARCHAR(250) NOT NULL,
-    driver_avatar VARCHAR(250) NOT NULL
+    driver_avatar VARCHAR(250) NOT NULL,
+    driver_password VARCHAR(250) NOT NULL
 
   );
 

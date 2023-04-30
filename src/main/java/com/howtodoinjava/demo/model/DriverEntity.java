@@ -28,6 +28,9 @@ public class DriverEntity {
     @Column(name="driver_avatar")
     private String driverAvatar;
 
+    @Column(name="driver_password")
+    private String driverPassword;
+
     public Long getId() {
         return id;
     }
@@ -74,5 +77,13 @@ public class DriverEntity {
 
     public void setDriverAvatar(String driverAvatar) {
         this.driverAvatar = driverAvatar;
+    }
+
+    public String getDriverPassword() {
+    	return driverPassword;
+    }
+
+    public void setDriverPassword(String driverPassword) {
+    	this.driverPassword = driverPassword;
     }
 }

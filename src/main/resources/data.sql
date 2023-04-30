@@ -11,9 +11,9 @@ VALUES
   	('Benz', 'Honda', '1235', 'White', '7' );
 
 INSERT INTO
-	TBL_DRIVERS (driver_name, driver_phone_number, driver_license_number, driver_year_of_experience, driver_avatar)
+	TBL_DRIVERS (driver_name, driver_phone_number, driver_license_number, driver_year_of_experience, driver_avatar, driver_password)
 VALUES
-  	('John', '011223344', 'E1234', '10', 'John.png');
+  	('John', '011223344', 'E1234', '10', 'John.png', 'this-is-password');
 
 
 INSERT INTO
