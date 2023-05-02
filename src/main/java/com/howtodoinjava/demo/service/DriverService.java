@@ -14,6 +14,8 @@ import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Service;
 
 import com.howtodoinjava.demo.exception.RecordNotFoundException;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 
 
 @Service
@@ -69,6 +71,14 @@ public class DriverService {
 
             return entity;
         }
+    }
+
+
+    public DriverEntity createDriver(@RequestBody DriverEntity driver)
+    {
+        DriverEntity createdDriver = repository.save(driver);
+
+        return createdDriver;
     }
 
     public void deleteDriverById(Long id) throws RecordNotFoundException

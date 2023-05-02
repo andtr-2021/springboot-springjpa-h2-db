@@ -1,5 +1,6 @@
 package com.howtodoinjava.demo.web;
 
+import java.net.URI;
 import java.util.List;
 
 import com.howtodoinjava.demo.model.DriverEntity;
@@ -13,6 +14,9 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import com.howtodoinjava.demo.exception.RecordNotFoundException;
+import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
+
+import javax.validation.Valid;
 
 
 @RestController
@@ -42,12 +46,14 @@ public class DriverController
         return new ResponseEntity<DriverEntity>(entity, new HttpHeaders(), HttpStatus.OK);
     }
 
+
     @PostMapping
     public ResponseEntity<DriverEntity> createOrUpdateDriver(DriverEntity driver)
             throws RecordNotFoundException {
         DriverEntity updated = service.createOrUpdateDriver(driver);
         return new ResponseEntity<DriverEntity>(updated, new HttpHeaders(), HttpStatus.OK);
     }
+
 
     @DeleteMapping("/{id}")
     public HttpStatus deleteDriverById(@PathVariable("id") Long id)
