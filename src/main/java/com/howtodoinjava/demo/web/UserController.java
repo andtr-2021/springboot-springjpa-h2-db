@@ -47,6 +47,8 @@ public class UserController
         return new ResponseEntity<UserEntity>(updated, new HttpHeaders(), HttpStatus.OK);
     }
 
+
+
     @DeleteMapping("/{id}")
     public HttpStatus deleteUserById(@PathVariable("id") Long id)
             throws RecordNotFoundException {

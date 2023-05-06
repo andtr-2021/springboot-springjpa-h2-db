@@ -40,7 +40,7 @@ public class PaymentController
     }
 
     @PostMapping
-    public ResponseEntity<PaymentEntity> createOrUpdatePayment(PaymentEntity payment)
+    public ResponseEntity<PaymentEntity> createOrUpdatePayment(@RequestBody PaymentEntity payment)
             throws RecordNotFoundException {
         PaymentEntity updated = service.createOrUpdatePayment(payment);
         return new ResponseEntity<PaymentEntity>(updated, new HttpHeaders(), HttpStatus.OK);

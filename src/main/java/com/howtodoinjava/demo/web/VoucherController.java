@@ -40,7 +40,7 @@ public class VoucherController
     }
 
     @PostMapping
-    public ResponseEntity<VoucherEntity> createOrUpdateVoucher(VoucherEntity voucher)
+    public ResponseEntity<VoucherEntity> createOrUpdateVoucher(@RequestBody VoucherEntity voucher)
             throws RecordNotFoundException {
         VoucherEntity updated = service.createOrUpdateVoucher(voucher);
         return new ResponseEntity<VoucherEntity>(updated, new HttpHeaders(), HttpStatus.OK);

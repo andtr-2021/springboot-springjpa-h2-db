@@ -42,7 +42,7 @@ public class VehicleController
     }
 
     @PostMapping
-    public ResponseEntity<VehicleEntity> createOrUpdateVehicle(VehicleEntity vehicle)
+    public ResponseEntity<VehicleEntity> createOrUpdateVehicle(@RequestBody VehicleEntity vehicle)
             throws RecordNotFoundException {
         VehicleEntity updated = service.createOrUpdateVehicle(vehicle);
         return new ResponseEntity<VehicleEntity>(updated, new HttpHeaders(), HttpStatus.OK);

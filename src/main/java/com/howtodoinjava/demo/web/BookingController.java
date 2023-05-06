@@ -42,7 +42,7 @@ public class BookingController
     }
 
     @PostMapping
-    public ResponseEntity<BookingEntity> createOrUpdateBooking(BookingEntity booking)
+    public ResponseEntity<BookingEntity> createOrUpdateBooking(@RequestBody BookingEntity booking)
             throws RecordNotFoundException {
         BookingEntity updated = service.createOrUpdateBooking(booking);
         return new ResponseEntity<BookingEntity>(updated, new HttpHeaders(), HttpStatus.OK);
