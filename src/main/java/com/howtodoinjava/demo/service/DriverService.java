@@ -73,14 +73,6 @@ public class DriverService {
         }
     }
 
-
-    public DriverEntity createDriver(@RequestBody DriverEntity driver)
-    {
-        DriverEntity createdDriver = repository.save(driver);
-
-        return createdDriver;
-    }
-
     public void deleteDriverById(Long id) throws RecordNotFoundException
     {
         Optional<DriverEntity> driver = repository.findById(id);

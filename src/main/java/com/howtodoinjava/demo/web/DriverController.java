@@ -48,7 +48,14 @@ public class DriverController
 
 
     @PostMapping
-    public ResponseEntity<DriverEntity> createOrUpdateDriver(@RequestBody DriverEntity driver)
+    public ResponseEntity<DriverEntity> createDriver(@RequestBody DriverEntity driver)
+            throws RecordNotFoundException {
+        DriverEntity updated = service.createOrUpdateDriver(driver);
+        return new ResponseEntity<DriverEntity>(updated, new HttpHeaders(), HttpStatus.OK);
+    }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<DriverEntity> updateDriver(@RequestBody DriverEntity driver)
             throws RecordNotFoundException {
         DriverEntity updated = service.createOrUpdateDriver(driver);
         return new ResponseEntity<DriverEntity>(updated, new HttpHeaders(), HttpStatus.OK);
