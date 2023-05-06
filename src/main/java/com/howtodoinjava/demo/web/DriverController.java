@@ -59,7 +59,7 @@ public class DriverController
     public HttpStatus deleteDriverById(@PathVariable("id") Long id)
             throws RecordNotFoundException {
         service.deleteDriverById(id);
-        return HttpStatus.FORBIDDEN;
+        return HttpStatus.OK;
     }
 
 }

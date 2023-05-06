@@ -52,7 +52,7 @@ public class VehicleController
     public HttpStatus deleteVehicleById(@PathVariable("id") Long id)
             throws RecordNotFoundException {
         service.deleteVehicleById(id);
-        return HttpStatus.FORBIDDEN;
+        return HttpStatus.OK;
     }
 
 }
